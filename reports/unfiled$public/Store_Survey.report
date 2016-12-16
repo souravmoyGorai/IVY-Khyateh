@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Survey_Result__c$Store__c.Parent_Branch__c.Distributor_Name__c</field>
+    </columns>
+    <columns>
+        <field>Survey_Result__c$Store__c.Parent_Branch__c.Name</field>
+    </columns>
+    <columns>
+        <field>Survey_Result__c$Store__c.Sub_Channel_Code__c</field>
+    </columns>
+    <columns>
+        <field>Survey_Result__c$Store__c.Local_Channel_Code__c</field>
+    </columns>
+    <columns>
+        <field>Survey_Result__c$Name</field>
+    </columns>
+    <columns>
+        <field>Survey_Result__c$Store__c.Name</field>
+    </columns>
+    <columns>
+        <field>Survey_Result__c$Store__c.StoreCode__c</field>
+    </columns>
+    <columns>
+        <field>Survey_Result__c$Seller__c.Name</field>
+    </columns>
+    <columns>
+        <field>Survey_Result__c$Seller__c.ReportsTo.Name</field>
+    </columns>
+    <columns>
+        <field>Survey_Result__c$Total_Score__c</field>
+    </columns>
+    <format>Tabular</format>
+    <name>Store Survey</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Store_Survey__c</reportType>
+    <scope>user</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Survey_Result__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CURRENT</interval>
+    </timeFrameFilter>
+</Report>

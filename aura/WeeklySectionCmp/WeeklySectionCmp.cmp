@@ -1,0 +1,28 @@
+<aura:component >
+    
+    <aura:attribute name="weekdays" type="String[]" default="Sunday,Monday,Tuesday,Wednesday,Thursday,Friday,Saturday" />
+    <aura:attribute name="selectedDays" type="String[]" />
+    <aura:attribute name="textValue" type="String" default="1"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+    <div class="slds-grid slds-wrap">
+        <label class="slds-radio__label" style="padding-left:5px">
+            <span class="slds-form-element__label">Recurs every</span>
+        </label>
+        <ui:inputText aura:id="week-number" class="slds-input adjustWidth" value="{!v.textValue}"/>
+        <label class="slds-radio__label" style="padding-left:5px">
+            <span class="slds-form-element__label">week(s) on</span>
+        </label>
+    </div>
+    <div class="slds-grid slds-wrap" style="padding-top:20px">
+        <aura:iteration items="{!v.weekdays}" var="day" indexVar="index">
+            <div class="slds-grid slds-wrap paddingDown">
+                <ui:inputCheckbox aura:id="weekCheck-id" change="{!c.checkRecurring}" class="slds-checkbox" label="" text="{!index}"/>
+                <span class="slds-form-element__label" style="padding-left:5px">
+                    {!day}
+                </span>
+            </div>
+        </aura:iteration>
+    </div>
+</aura:component>

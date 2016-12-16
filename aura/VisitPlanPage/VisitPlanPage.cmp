@@ -1,0 +1,160 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes" controller="visitplancontroller">
+
+    <ltng:require styles="{!$Resource.SLDS212 +'/assets/styles/salesforce-lightning-design-system.css'}" />
+
+    <!-- Attributes -->
+    <aura:attribute name="accountIds" type="id" description="The current record Id to display" />
+    <aura:attribute name="contactIds" type="id" description="The current record Id to display" />
+    <aura:attribute name="visits" type="visitplancontroller.wrapperclass[]" />
+    <aura:attribute name="fetchcheck" type="boolean" default="false" />
+    <aura:attribute name="prevVisitPlanList" type="Visit_Plan__c[]" />
+
+    <!-- Event handlers -->
+    <aura:handler name="updateLookupIdEvent" event="c:updateLookupIdEvent" action="{!c.handleAccountIdUpdate}" />
+    <aura:handler name="clearLookupIdEvent" event="c:clearLookupIdEvent" action="{!c.handleAccountIdClear}" />
+
+    <!-- Lookup component -->
+     <div class="slds">
+        <div class="slds-page-header">
+          <div class="slds-grid">
+            <div class="slds-col slds-has-flexi-truncate">
+              <p class="slds-text-heading--label">Visit Plan</p>
+              <div class="slds-grid">
+                <div class="slds-grid slds-type-focus slds-no-space">
+                  <h1 class="slds-text-heading--medium slds-truncate" title="All Surveys">Schedule Visit Plans</h1>
+                </div>
+              </div>
+            </div>
+            </div>
+         </div>
+    </div>
+    
+    <div class="slds">
+        <div style="padding:20px 0px">
+            <div class="slds-form-element slds-is-required slds-col slds-size--1-of-1 slds-medium-size--5-of-12 slds-large-size--1-of-3 slds-m-left--large" style="padding-bottom:10px;">
+                <c:LookupSObject label="Account" pluralLabel="Accounts" sObjectAPIName="Account" listIconSVGPath="/resource/slds212/assets/icons/standard-sprite/svg/symbols.svg#account" listIconClass="slds-icon-standard-account" />
+                <!--<div id="error-message" class="slds-form-element__help">This field is required</div>   -->
+            </div>
+            <div class="slds-form-element slds-is-required slds-col slds-size--1-of-1 slds-medium-size--5-of-12 slds-large-size--1-of-3 slds-m-left--large">
+                <c:LookupSObject label="Seller Name" pluralLabel="Contacts" sObjectAPIName="Contact" listIconSVGPath="/resource/slds212/assets/icons/standard-sprite/svg/symbols.svg#contact" listIconClass="slds-icon-standard-contact" />
+            </div>
+            <br/>
+            <ui:button aura:id="button" label="Fetch" press="{!c.fetch}" buttonTitle="fetch" class="slds-m-left--large slds-button--brand" />
+            <br/><br/>
+            <aura:if isTrue="{!v.fetchcheck}">
+                <div class="container">
+                    <div class="slds">
+                        <table class="slds-table slds-table--bordered slds-table--cell-buffer">
+                            <thead>
+                                <tr class="slds-text-title--caps">
+                                    <th scope="col">
+                                        <div class="slds-truncate" title="Action">Account</div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="slds-truncate" title="Project Name">Seller</div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="slds-truncate" title="Activity">Frequency</div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="slds-truncate" title="Activity">Mon</div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="slds-truncate" title="Activity">Tue</div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="slds-truncate" title="Activity">Wed</div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="slds-truncate" title="Activity">Thur</div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="slds-truncate" title="Activity">Fri</div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="slds-truncate" title="Activity">Sat</div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="slds-truncate" title="Activity">Sun</div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="slds-truncate" title="Activity">Week1</div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="slds-truncate" title="Activity">Week2</div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="slds-truncate" title="Activity">Week3</div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="slds-truncate" title="Activity">Week4</div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="slds-truncate" title="Activity">Week5</div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <aura:iteration items="{!v.visits}" var="vp">
+                                    <tr>
+                                    	<td scope="col">
+                                        	<ui:outputText value="{!vp.accName}" class="slds-size--2-of-3 slds-truncate slds-text-align--center" />
+                                        </td>
+                                        <td scope="col">
+                                            <ui:outputText value="{!vp.conName}" class="slds-size--2-of-3 slds-truncate slds-text-align--center" />
+                                        </td>
+                                        <td scope="col">
+                                            <ui:outputText value="{!vp.frequency}" class="slds-size--2-of-3 slds-truncate slds-text-align--center" />
+                                        </td>
+                                        <td scope="col">
+                                            <ui:inputCheckbox value="{!vp.mon}" class="slds-size--2-of-3 slds-truncate slds-m-left--x-small" />
+                                        </td>
+                                        <td scope="col">
+                                            <ui:inputCheckbox value="{!vp.tue}" class="slds-size--2-of-3 slds-truncate slds-m-left--x-small" />
+                                        </td>
+                                        <td scope="col">
+                                            <ui:inputCheckbox value="{!vp.wed}" class="slds-size--2-of-3 slds-truncate slds-m-left--x-small" />
+                                        </td>
+                                        <td scope="col">
+                                            <ui:inputCheckbox value="{!vp.thur}" class="slds-size--2-of-3 slds-truncate slds-m-left--x-small" />
+                                        </td>
+                                        <td scope="col">
+                                            <ui:inputCheckbox value="{!vp.fri}" class="slds-size--2-of-3 slds-truncate slds-m-left--x-small" />
+                                        </td>
+                                        <td scope="col">
+                                            <ui:inputCheckbox value="{!vp.sat}" class="slds-size--2-of-3 slds-truncate slds-m-left--x-small" />
+                                        </td>
+                                        <td scope="col">
+                                            <ui:inputCheckbox value="{!vp.sun}" class="slds-size--2-of-3 slds-truncate slds-m-left--x-small" />
+                                        </td>
+                                        <td scope="col">
+                                            <ui:inputCheckbox value="{!vp.week1}" class="slds-size--2-of-3 slds-truncate slds-m-left--small" />
+                                        </td>
+                                        <td scope="col">
+                                            <ui:inputCheckbox value="{!vp.week2}" class="slds-size--2-of-3 slds-truncate slds-m-left--small" />
+                                        </td>
+                                        <td scope="col">
+                                            <ui:inputCheckbox value="{!vp.week3}" class="slds-size--2-of-3 slds-truncate slds-m-left--small" />
+                                        </td>
+                                        <td scope="col">
+                                            <ui:inputCheckbox value="{!vp.week4}" class="slds-size--2-of-3 slds-truncate slds-m-left--small" />
+                                        </td>
+                                        <td scope="col">
+                                            <ui:inputCheckbox value="{!vp.week5}" class="slds-size--2-of-3 slds-truncate slds-m-left--small" />
+                                        </td>
+                                    </tr>
+                                </aura:iteration>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <br/>
+                <ui:button aura:id="buttons" label="Save" press="{!c.saveplan}" buttonTitle="save" class="slds-align--absolute-center" />
+            </aura:if>
+        </div>
+    </div>
+    <!-- Record view -->
+    <!--<aura:if isTrue="{!v.recordId!=null}">
+        <force:recordView recordId="{!v.recordId}" />
+    </aura:if>-->
+</aura:component>

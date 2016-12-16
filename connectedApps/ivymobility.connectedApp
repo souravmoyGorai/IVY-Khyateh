@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>umesh.r@ivymobility.com</contactEmail>
+    <label>ivymobility</label>
+    <oauthConfig>
+        <callbackUrl>https://www.getpostman.com/oauth2/callback</callbackUrl>
+        <consumerKey>3MVG9szVa2RxsqBYxZAHru5ZDd_SI6WKJ9JdyZvrG_nYUtRhpj3tPxhwbKsgP7Vq1sbbgc9lh4Onqj0B4mWrd</consumerKey>
+        <scopes>Api</scopes>
+    </oauthConfig>
+</ConnectedApp>

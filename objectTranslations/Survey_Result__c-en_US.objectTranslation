@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Survey Result</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Survey Results</value>
+    </caseValues>
+    <fields>
+        <label><!-- Code --></label>
+        <name>Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Seller --></label>
+        <name>Seller__c</name>
+        <relationshipLabel><!-- Survey Results --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Complete</masterLabel>
+            <translation><!-- Complete --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Progress</masterLabel>
+            <translation><!-- In Progress --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Store --></label>
+        <name>Store__c</name>
+        <relationshipLabel><!-- Survey Results --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Survey --></label>
+        <name>Survey__c</name>
+        <relationshipLabel><!-- Survey Results --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Total Score --></label>
+        <name>Total_Score__c</name>
+    </fields>
+    <layouts>
+        <layout>Survey Result Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

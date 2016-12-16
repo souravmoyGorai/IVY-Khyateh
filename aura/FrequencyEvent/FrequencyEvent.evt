@@ -1,0 +1,4 @@
+<aura:event type="APPLICATION" description="Event template" >
+    <aura:attribute name="passValue" type="String" />
+    <aura:attribute name="passDays" type="String" default="" />
+</aura:event>

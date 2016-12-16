@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value><!-- Survey Question --></value>
+    </caseValues>
+    <fields>
+        <label><!-- Code --></label>
+        <name>Code__c</name>
+    </fields>
+    <fields>
+        <label>従属質問の適合性</label>
+        <name>Dependent_Question_Match__c</name>
+    </fields>
+    <fields>
+        <label>従属質問</label>
+        <name>Dependent_Question__c</name>
+        <relationshipLabel>調査の質問</relationshipLabel>
+    </fields>
+    <fields>
+        <label>から</label>
+        <name>From__c</name>
+    </fields>
+    <fields>
+        <label><!-- Question Category --></label>
+        <name>Question_Category__c</name>
+        <picklistValues>
+            <masterLabel>IAA</masterLabel>
+            <translation><!-- IAA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IAC</masterLabel>
+            <translation><!-- IAC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IAF</masterLabel>
+            <translation><!-- IAF --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IAV</masterLabel>
+            <translation><!-- IAV --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label>質問コード</label>
+        <name>Question_Code__c</name>
+        <picklistValues>
+            <masterLabel>IAA</masterLabel>
+            <translation><!-- IAA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IAC</masterLabel>
+            <translation><!-- IAC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IAF</masterLabel>
+            <translation><!-- IAF --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IAV</masterLabel>
+            <translation><!-- IAV --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label>質問アイディー</label>
+        <name>Question_Id__c</name>
+    </fields>
+    <fields>
+        <label>質問タイプ</label>
+        <name>Question_Type__c</name>
+        <picklistValues>
+            <masterLabel>Integer Text</masterLabel>
+            <translation><!-- Integer Text --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes/No</masterLabel>
+            <translation><!-- Yes/No --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label>質問</label>
+        <name>Question__c</name>
+    </fields>
+    <fields>
+        <label>調査コード</label>
+        <name>Survey_Code__c</name>
+    </fields>
+    <fields>
+        <label>調査</label>
+        <name>Survey__c</name>
+        <relationshipLabel>調査の質問</relationshipLabel>
+    </fields>
+    <fields>
+        <label>調査対象</label>
+        <name>Target__c</name>
+    </fields>
+    <fields>
+        <label>へ</label>
+        <name>To__c</name>
+    </fields>
+    <fields>
+        <label>重みづけ</label>
+        <name>Weightage__c</name>
+    </fields>
+    <layouts>
+        <layout>Survey Question Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel><!-- Survey Question Name --></nameFieldLabel>
+</CustomObjectTranslation>

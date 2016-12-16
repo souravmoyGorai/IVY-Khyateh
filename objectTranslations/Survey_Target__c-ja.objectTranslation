@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value><!-- Survey Target --></value>
+    </caseValues>
+    <fields>
+        <label>ブランチコード</label>
+        <name>Branch_Code__c</name>
+    </fields>
+    <fields>
+        <label>ブランドコード</label>
+        <name>BrandCode__c</name>
+    </fields>
+    <fields>
+        <label>カテゴリーコード</label>
+        <name>CategoryCode__c</name>
+    </fields>
+    <fields>
+        <label>ディストリビューターコード</label>
+        <name>Distributor_Code__c</name>
+    </fields>
+    <fields>
+        <label>から</label>
+        <name>From__c</name>
+    </fields>
+    <fields>
+        <label>ローカルチャンネルコード</label>
+        <name>LocalChannelCode__c</name>
+    </fields>
+    <fields>
+        <label>サブチャンネルコード</label>
+        <name>SubChannelCode__c</name>
+    </fields>
+    <fields>
+        <label>ターゲット</label>
+        <name>Target__c</name>
+    </fields>
+    <fields>
+        <label>へ</label>
+        <name>To__c</name>
+    </fields>
+    <nameFieldLabel><!-- Survey Target Name --></nameFieldLabel>
+</CustomObjectTranslation>

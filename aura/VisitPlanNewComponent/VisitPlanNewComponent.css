@@ -1,0 +1,8 @@
+.THIS .container {
+	padding: 1rem .75rem;
+}
+@media (min-width: 48em) {
+    .THIS .container {
+        padding: 1rem 1.5rem;
+    }
+}

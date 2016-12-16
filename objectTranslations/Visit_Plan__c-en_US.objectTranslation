@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Visit Plan</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Visits Plan</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account --></label>
+        <name>Account__c</name>
+        <relationshipLabel><!-- Visits Plan --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Accounts --></label>
+        <name>Accounts__c</name>
+        <relationshipLabel><!-- Visits Plan (Accounts) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Branch Code --></label>
+        <name>Branch_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Distributor Code --></label>
+        <name>Distributor_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Frequency --></label>
+        <name>Frequency__c</name>
+    </fields>
+    <fields>
+        <label><!-- Friday --></label>
+        <name>Friday__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lat and Long --></label>
+        <name>Lat_and_Long__c</name>
+    </fields>
+    <fields>
+        <label><!-- Monday --></label>
+        <name>Monday__c</name>
+    </fields>
+    <fields>
+        <label><!-- Retailer Code --></label>
+        <name>Rlt_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Saturday --></label>
+        <name>Saturday__c</name>
+    </fields>
+    <fields>
+        <label><!-- Seller Name --></label>
+        <name>Seller_Name__c</name>
+        <relationshipLabel><!-- Visits Plan --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Sunday --></label>
+        <name>Sunday__c</name>
+    </fields>
+    <fields>
+        <label><!-- Thursday --></label>
+        <name>Thursday__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tuesday --></label>
+        <name>Tuesday__c</name>
+    </fields>
+    <fields>
+        <label><!-- WK1 --></label>
+        <name>WK1__c</name>
+    </fields>
+    <fields>
+        <label><!-- WK2 --></label>
+        <name>WK2__c</name>
+    </fields>
+    <fields>
+        <label><!-- WK3 --></label>
+        <name>WK3__c</name>
+    </fields>
+    <fields>
+        <label><!-- WK4 --></label>
+        <name>WK4__c</name>
+    </fields>
+    <fields>
+        <label><!-- WK5 --></label>
+        <name>WK5__c</name>
+    </fields>
+    <fields>
+        <label><!-- Wednesday --></label>
+        <name>Wednesday__c</name>
+    </fields>
+    <layouts>
+        <layout>Visit Plan Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

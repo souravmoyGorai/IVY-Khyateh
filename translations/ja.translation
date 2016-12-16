@@ -1,0 +1,618 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Translations xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customApplications>
+        <label><!-- PE --></label>
+        <name>PE</name>
+    </customApplications>
+    <customApplications>
+        <label><!-- PE Lightning --></label>
+        <name>PE_Lightning</name>
+    </customApplications>
+    <customLabels>
+        <label><!-- VisitPlanId --></label>
+        <name>VisitPlanId</name>
+    </customLabels>
+    <customTabs>
+        <label><!-- AccountSearch --></label>
+        <name>AccountSearch</name>
+    </customTabs>
+    <customTabs>
+        <label>調査質問を探す</label>
+        <name>Search_Survey_Questions</name>
+    </customTabs>
+    <globalPicklists>
+        <name>Product_Sub_Brand</name>
+        <picklistValues>
+            <masterLabel>3 Minute Miracle</masterLabel>
+            <translation><!-- 3 Minute Miracle --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>APDO</masterLabel>
+            <translation><!-- APDO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Aerosol</masterLabel>
+            <translation><!-- Aerosol --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AfterShave</masterLabel>
+            <translation><!-- AfterShave --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ariel Bar</masterLabel>
+            <translation><!-- Ariel Bar --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bar</masterLabel>
+            <translation><!-- Bar --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bath Soap</masterLabel>
+            <translation><!-- Bath Soap --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Berry</masterLabel>
+            <translation><!-- Berry --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Blue2</masterLabel>
+            <translation><!-- Blue2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Blue3</masterLabel>
+            <translation><!-- Blue3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Body Wash</masterLabel>
+            <translation><!-- Body Wash --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Car</masterLabel>
+            <translation><!-- Car --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cleanser</masterLabel>
+            <translation><!-- Cleanser --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Conditioner</masterLabel>
+            <translation><!-- Conditioner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cottony Clean</masterLabel>
+            <translation><!-- Cottony Clean --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cream</masterLabel>
+            <translation><!-- Cream --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Daisy</masterLabel>
+            <translation><!-- Daisy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Diapers</masterLabel>
+            <translation><!-- Diapers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Disposables</masterLabel>
+            <translation><!-- Disposables --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Foamy</masterLabel>
+            <translation><!-- Foamy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gel</masterLabel>
+            <translation><!-- Gel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Intensive Conditioner</masterLabel>
+            <translation><!-- Intensive Conditioner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Jaguar</masterLabel>
+            <translation><!-- Jaguar --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lemon Kalamansi</masterLabel>
+            <translation><!-- Lemon Kalamansi --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Liners</masterLabel>
+            <translation><!-- Liners --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Liquid Hand Soap</masterLabel>
+            <translation><!-- Liquid Hand Soap --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Liquids</masterLabel>
+            <translation><!-- Liquids --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lotion</masterLabel>
+            <translation><!-- Lotion --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mach3</masterLabel>
+            <translation><!-- Mach3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Male Gel</masterLabel>
+            <translation><!-- Male Gel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Manual Oral Care</masterLabel>
+            <translation><!-- Manual Oral Care --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mask</masterLabel>
+            <translation><!-- Mask --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Orange</masterLabel>
+            <translation><!-- Orange --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Others</masterLabel>
+            <translation><!-- Others --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PGP</masterLabel>
+            <translation><!-- PGP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pampers</masterLabel>
+            <translation><!-- Pampers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Placement</masterLabel>
+            <translation><!-- Placement --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Powder</masterLabel>
+            <translation><!-- Powder --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Power Oral Care</masterLabel>
+            <translation><!-- Power Oral Care --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ProGlide</masterLabel>
+            <translation><!-- ProGlide --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rinse</masterLabel>
+            <translation><!-- Rinse --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rubie</masterLabel>
+            <translation><!-- Rubie --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sensor</masterLabel>
+            <translation><!-- Sensor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Serum</masterLabel>
+            <translation><!-- Serum --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Shampoo</masterLabel>
+            <translation><!-- Shampoo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Systems</masterLabel>
+            <translation><!-- Systems --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Thicks</masterLabel>
+            <translation><!-- Thicks --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tooth Brush</masterLabel>
+            <translation><!-- Tooth Brush --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Treatment</masterLabel>
+            <translation><!-- Treatment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ultra</masterLabel>
+            <translation><!-- Ultra --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>V44/CUSTCR</masterLabel>
+            <translation><!-- V44/CUSTCR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VINH</masterLabel>
+            <translation><!-- VINH --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VVAPDROP</masterLabel>
+            <translation><!-- VVAPDROP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VVAPORUB</masterLabel>
+            <translation><!-- VVAPORUB --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vector</masterLabel>
+            <translation><!-- Vector --></translation>
+        </picklistValues>
+    </globalPicklists>
+    <globalPicklists>
+        <name>Product_Brand</name>
+        <picklistValues>
+            <masterLabel>Ambi Pur</masterLabel>
+            <translation><!-- Ambi Pur --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ariel</masterLabel>
+            <translation><!-- Ariel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bonux</masterLabel>
+            <translation><!-- Bonux --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Downy</masterLabel>
+            <translation><!-- Downy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gillette</masterLabel>
+            <translation><!-- Gillette --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Head &amp; Shoulders</masterLabel>
+            <translation><!-- Head &amp; Shoulders --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Herbal Essences</masterLabel>
+            <translation><!-- Herbal Essences --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Joy</masterLabel>
+            <translation><!-- Joy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Metamucil</masterLabel>
+            <translation><!-- Metamucil --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ORAL B</masterLabel>
+            <translation><!-- ORAL B --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Olay</masterLabel>
+            <translation><!-- Olay --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Old Spice</masterLabel>
+            <translation><!-- Old Spice --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pampers</masterLabel>
+            <translation><!-- Pampers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pantene</masterLabel>
+            <translation><!-- Pantene --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rejoice</masterLabel>
+            <translation><!-- Rejoice --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Safeguard</masterLabel>
+            <translation><!-- Safeguard --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Secret</masterLabel>
+            <translation><!-- Secret --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tide</masterLabel>
+            <translation><!-- Tide --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vicks</masterLabel>
+            <translation><!-- Vicks --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Whisper</masterLabel>
+            <translation><!-- Whisper --></translation>
+        </picklistValues>
+    </globalPicklists>
+    <globalPicklists>
+        <name>ChannelCodePicklist</name>
+        <picklistValues>
+            <masterLabel>DP OTC</masterLabel>
+            <translation><!-- DP OTC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DP SS Small</masterLabel>
+            <translation><!-- DP SS Small --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DP Wholesale</masterLabel>
+            <translation><!-- DP Wholesale --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Divestitures</masterLabel>
+            <translation><!-- Divestitures --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HFS</masterLabel>
+            <translation><!-- HFS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HFS Convenience</masterLabel>
+            <translation><!-- HFS Convenience --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HFS Jobber</masterLabel>
+            <translation><!-- HFS Jobber --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HFS Minimarkets</masterLabel>
+            <translation><!-- HFS Minimarkets --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HFS Wholesale</masterLabel>
+            <translation><!-- HFS Wholesale --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IMR Hybrid</masterLabel>
+            <translation><!-- IMR Hybrid --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>KA Hybrid</masterLabel>
+            <translation><!-- KA Hybrid --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>KA WS Big</masterLabel>
+            <translation><!-- KA WS Big --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>KA WS Small</masterLabel>
+            <translation><!-- KA WS Small --></translation>
+        </picklistValues>
+    </globalPicklists>
+    <globalPicklists>
+        <name>Product_Category</name>
+        <picklistValues>
+            <masterLabel>ADM</masterLabel>
+            <translation><!-- ADM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Baby Care</masterLabel>
+            <translation><!-- Baby Care --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dish Care</masterLabel>
+            <translation><!-- Dish Care --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fabric Enhancer</masterLabel>
+            <translation><!-- Fabric Enhancer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Feminine Care</masterLabel>
+            <translation><!-- Feminine Care --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Grooming</masterLabel>
+            <translation><!-- Grooming --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hair Care</masterLabel>
+            <translation><!-- Hair Care --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Home Care</masterLabel>
+            <translation><!-- Home Care --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Laundry</masterLabel>
+            <translation><!-- Laundry --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Oral Care</masterLabel>
+            <translation><!-- Oral Care --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Personal Cleansing Care</masterLabel>
+            <translation><!-- Personal Cleansing Care --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Personal Health Care</masterLabel>
+            <translation><!-- Personal Health Care --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Respiratory Care</masterLabel>
+            <translation><!-- Respiratory Care --></translation>
+        </picklistValues>
+    </globalPicklists>
+    <globalPicklists>
+        <name>Local_Channel</name>
+        <picklistValues>
+            <masterLabel>DP OTC</masterLabel>
+            <translation><!-- DP OTC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DP SS Small</masterLabel>
+            <translation><!-- DP SS Small --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DP Wholesale</masterLabel>
+            <translation><!-- DP Wholesale --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Divestitures</masterLabel>
+            <translation><!-- Divestitures --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HFS Big</masterLabel>
+            <translation><!-- HFS Big --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HFS Convenience</masterLabel>
+            <translation><!-- HFS Convenience --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HFS Jobber</masterLabel>
+            <translation><!-- HFS Jobber --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HFS Med</masterLabel>
+            <translation><!-- HFS Med --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HFS Minimarkets</masterLabel>
+            <translation><!-- HFS Minimarkets --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HFS Small</masterLabel>
+            <translation><!-- HFS Small --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HFS Wholesale</masterLabel>
+            <translation><!-- HFS Wholesale --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IMR Hybrid</masterLabel>
+            <translation><!-- IMR Hybrid --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>KA Hybrid</masterLabel>
+            <translation><!-- KA Hybrid --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>KA WS Big</masterLabel>
+            <translation><!-- KA WS Big --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>KA WS Small</masterLabel>
+            <translation><!-- KA WS Small --></translation>
+        </picklistValues>
+    </globalPicklists>
+    <quickActions>
+        <label><!-- LogACall --></label>
+        <name>LogACall</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewAccount --></label>
+        <name>NewAccount</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewCase --></label>
+        <name>NewCase</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewContact --></label>
+        <name>NewContact</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewEvent --></label>
+        <name>NewEvent</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewGroup --></label>
+        <name>NewGroup</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewLead --></label>
+        <name>NewLead</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewNote --></label>
+        <name>NewNote</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewOpportunity --></label>
+        <name>NewOpportunity</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewTask --></label>
+        <name>NewTask</name>
+    </quickActions>
+    <reportTypes>
+        <description><!-- Question Granularity Survey --></description>
+        <label><!-- Question Granularity Survey --></label>
+        <name>Question_Granularity_Survey</name>
+        <sections>
+            <label><!-- Question --></label>
+            <name>Question</name>
+        </sections>
+        <sections>
+            <label><!-- Seller --></label>
+            <name>Seller</name>
+        </sections>
+        <sections>
+            <label><!-- Store --></label>
+            <name>Store</name>
+        </sections>
+        <sections>
+            <label><!-- Store Branch --></label>
+            <name>Store Branch</name>
+        </sections>
+        <sections>
+            <label><!-- Supervisor --></label>
+            <name>Supervisor</name>
+        </sections>
+        <sections>
+            <label><!-- Survey Results Detail --></label>
+            <name>Survey Results Detail</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Store Survey --></description>
+        <label><!-- Store Survey --></label>
+        <name>Store_Survey</name>
+        <sections>
+            <label><!-- Distributor Branch Info --></label>
+            <name>Distributor Branch Info</name>
+        </sections>
+        <sections>
+            <label><!-- Seller Info --></label>
+            <name>Seller Info</name>
+        </sections>
+        <sections>
+            <label><!-- Store Info --></label>
+            <name>Store Info</name>
+        </sections>
+        <sections>
+            <label><!-- Survey Results --></label>
+            <name>Survey Results</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Stores without Visits --></description>
+        <label><!-- Stores without Visits --></label>
+        <name>Stores_without_Visits</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Visits --></label>
+            <name>Visits</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Visits with Historical Trending --></description>
+        <label><!-- Visits with Historical Trending --></label>
+        <name>Visits_with_Historical_Trending</name>
+        <sections>
+            <label><!-- Visit (Historical) --></label>
+            <name>Visit (Historical)</name>
+        </sections>
+        <sections>
+            <label><!-- Visits --></label>
+            <name>Visits</name>
+        </sections>
+    </reportTypes>
+</Translations>

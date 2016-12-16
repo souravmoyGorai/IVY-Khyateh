@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Survey</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Surveys</value>
+    </caseValues>
+    <fields>
+        <label><!-- Active --></label>
+        <name>Active__c</name>
+    </fields>
+    <fields>
+        <label><!-- From --></label>
+        <name>From__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product Brand --></label>
+        <name>Product_Brand__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product Category --></label>
+        <name>Product_Category__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product Sub Brand --></label>
+        <name>Product_Sub_Brand__c</name>
+    </fields>
+    <fields>
+        <label><!-- Store Channel --></label>
+        <name>Store_Channel__c</name>
+    </fields>
+    <fields>
+        <label><!-- Store Local Channel --></label>
+        <name>Store_Local_Channel__c</name>
+    </fields>
+    <fields>
+        <label><!-- Survey Code --></label>
+        <name>Survey_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- To --></label>
+        <name>To__c</name>
+    </fields>
+    <layouts>
+        <layout>Survey Layout</layout>
+        <sections>
+            <label><!-- Applicable To --></label>
+            <section>Applicable To</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

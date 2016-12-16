@@ -1,0 +1,116 @@
+<aura:component controller="HolidayClass" implements="force:lightningQuickActionWithoutHeader,force:hasRecordId">
+
+    <aura:attribute name="stages" type="String[]" default="Daily,Weekly,Monthly,Yearly" />
+    <aura:attribute name="weekdays" type="String[]" default="Sunday,Monday,Tuesday,Wednesday,Thursday,Friday,Saturday" />
+    <aura:attribute name="times" type="String[]" default="00:00,00:30,01:00,01:30,02:00,02:30,03:00,03:30,04:00,04:30,05:00,05:30,06:00,06:30,
+                                                          07:00,07:30,08:00,08:30,09:00,09:30,10:00,10:30,11:00,11:30,12:00,12:30,13:00,13:30,
+                                                          14:00,14:30,15:00,15:30,16:00,16:30,17:00,17:30,18:00,18:30,19:00,19:30,20:00,20:30,
+                                                          21:00,21:30,22:00,22:30,23:00,23:30" />
+    <aura:attribute name="holidayObject" type="HolidayWrpClass" />
+    <aura:attribute name="today" type="Date" default=""/>
+    <aura:attribute name="alertMessage" type="String" default=""/>
+    <aura:attribute name="FreqString" type="String" default=""/>
+    <aura:attribute name="selectedFreq" type="String" default="None"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:handler event="c:FrequencyEvent" action="{!c.updateFrequency}" />
+
+    <div class="slds">
+        <div aura:id="alert-id" class="showHide">
+            <span style="color:red">
+                {!v.alertMessage}
+            </span>
+            <br /><br />
+        </div>
+					
+        <lightning:input aura:id="holiday-name" name="holidayname" label="Holiday Name" value="{!v.holidayObject.HolidayName}"
+                         minlength="5" maxlength="50" required="true" messageWhenBadInput="Your entry must not be less than 5 characters." 
+                         class="slds-col slds-size--1-of-1 slds-medium-size--2-of-3 slds-large-size--1-of-2 paddingDown" />
+
+        <lightning:input aura:id="description-id" name="description" label="Description" value="{!v.holidayObject.Description}" 
+                         maxlength="255" class="slds-col slds-size--1-of-1 slds-medium-size--2-of-3 slds-large-size--2-of-3 paddingDown" />
+
+        <div class="slds-col slds-size--1-of-1 slds-medium-size--2-of-3 slds-large-size--1-of-2 paddingDownDate">
+            <ui:inputDate aura:id="dateField" label="Date" value="{!v.today}" displayDatePicker="true" class="paddingDown" required="true" change="{!c.startDateChange}"/>
+        </div>
+
+        <div class="slds-grid slds-wrap paddingDown">
+            <ui:inputCheckbox change="{!c.checkAllDay}" class="slds-checkbox" label="" value="{!v.holidayObject.AllDay}"/>
+            <span class="slds-form-element__label" style="padding-left:5px">
+                All Day
+            </span>
+        </div>
+
+        <div class="slds-grid slds-wrap paddingDown">
+
+            <div class="slds-col slds-size--1-of-2 slds-medium-size--1-of-2 slds-large-size--1-of-2">
+                <lightning:select aura:id="time-from" name="timeFrom" label="Time from" value="{!v.holidayObject.StartTime}" onchange="{!c.selectFromTime}" class="slds-col slds-size--1-of-1 slds-medium-size--2-of-3 slds-large-size--1-of-2">
+                    <aura:iteration items="{!v.times}" var="time" indexVar="index">
+                        <option value="{!time}">{!time}</option>
+                    </aura:iteration>
+                </lightning:select>
+            </div>
+
+            <div class="slds-col slds-size--1-of-2 slds-medium-size--1-of-2 slds-large-size--1-of-2">
+                <lightning:select aura:id="time-to" name="timeTo" label="to" value="{!v.holidayObject.EndTime}" onchange="{!c.selectToTime}" class="slds-col slds-size--1-of-1 slds-medium-size--2-of-3 slds-large-size--1-of-2">
+                    <aura:iteration items="{!v.times}" var="time" indexVar="index">
+                        <option value="{!time}">{!time}</option>
+                    </aura:iteration>
+                </lightning:select>
+            </div>
+
+        </div>
+
+        <div class="slds-grid slds-wrap paddingDown">
+            <ui:inputCheckbox change="{!c.checkRecurring}" class="slds-checkbox" label="" value="{!v.holidayObject.Recurring}"/>
+            <span class="slds-form-element__label" style="padding-left:5px">
+                Recurring Holiday
+            </span>
+        </div>
+
+        <div aura:id="recur-section" class="showHide">
+            <div class="paddingDown">
+                <span>Frequency</span>
+            </div>
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-size--1-of-3 slds-medium-size--1-of-3 slds-large-size--1-of-3">
+                    <div class="paddingDown">
+                        <aura:iteration items="{!v.stages}" var="stage" indexVar="index">
+                            <div>
+                                <ui:inputRadio aura:id="radiocheck-id" name="radioFrequencies" change="{!c.onFrequencyChange}" text="{!stage}" />
+                                <label class="slds-radio__label" style="padding-left:5px">
+                                    <span class="slds-form-element__label">{!stage}</span>
+                                </label>
+                            </div>
+                        </aura:iteration>
+                    </div>
+                </div>
+                <div class="slds-col slds-size--2-of-3 slds-medium-size--2-of-3 slds-large-size--2-of-3">
+                    <div>
+                        {!v.body}
+                    </div>
+                </div>
+            </div>
+            <div class="slds-col slds-size--1-of-1 slds-medium-size--2-of-3 slds-large-size--1-of-2 paddingDownDate">
+                <ui:inputDate aura:id="start-date" label="Start Date" value="{!v.today}" displayDatePicker="true" required="true" change="{!c.startDateChange2}"/>
+            </div>
+
+            <div class="slds-col slds-size--1-of-1 slds-medium-size--2-of-3 slds-large-size--1-of-2 paddingDownDate">
+                <ui:inputDate aura:id="end-date" label="End Date" value="{!v.today}" displayDatePicker="true" required="true"/>
+            </div>
+
+            <div class="slds-grid slds-wrap paddingDown">
+                <ui:inputCheckbox aura:id="noEnd-id" value="{!v.holidayObject.NoEndDate}" class="slds-checkbox" label="" />
+                <span class="slds-form-element__label" style="padding-left:5px">
+                    No End Date
+                </span>
+            </div>
+        </div>
+        
+        <div class="slds-x-small-buttons--horizontal" style="padding-top:20px">
+            <ui:button class="slds-button slds-button--neutral" press="{!c.cancel}" label="Cancel" />
+            <ui:button class="slds-button slds-button--brand" press="{!c.saveForm}" label="Save" />
+        </div>
+    </div>
+
+</aura:component>

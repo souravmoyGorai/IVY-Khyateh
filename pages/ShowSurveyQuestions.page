@@ -1,0 +1,235 @@
+<apex:page controller="ShowSurveyQuestionsController" showHeader="true" sidebar="true">
+    <apex:stylesheet value="{!URLFOR($Resource.SLDS212, '/assets/styles/salesforce-lightning-design-system.css')}"/>
+    <style>
+        select {            
+            background-color: #fff;
+            color: #16325c;
+            border: 1px solid #d8dde6;
+            border-radius: 0.25rem;
+            width: 100%;
+            transition: border 0.1s linear, background-color 0.1s linear;
+            height: calc(1.875rem + (1px * 2));
+            -moz-appearance: none;
+            -webkit-appearance: none;
+            padding-left: 0.5rem;
+            padding-right: 1.5rem;
+        }
+        
+        .hide {
+            display: none;
+        }
+        
+        .hide0 {
+            display: table-row;
+        }
+        
+    </style>
+    <apex:form >
+        <div class="slds" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+            <!-- Spinner -->
+            <div id="spinner">
+                <div class="slds-spinner_container">
+                    <div class="slds-spinner--brand slds-spinner slds-spinner--large" role="alert">
+                        <span class="slds-assistive-text">Loading</span>
+                        <div class="slds-spinner__dot-a"></div>
+                        <div class="slds-spinner__dot-b"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slds-page-header slds-theme--alt-inverse" role="banner">
+                <div class="slds-grid">
+                    <div class="slds-col slds-has-flexi-truncate">
+                        <h1 class="slds-page-header__title slds-truncate" title="Survey Template">Survey Template</h1>
+                    </div>
+                </div>
+            </div>
+            <article class="slds-card">
+                <div class="slds-card__body">
+                    <div class="slds-card__body--inner slds-grid slds-wrap slds-grid--pull-padded">
+                        <div class="slds-tile slds-media slds-card__tile slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-3 slds-hint-parent">
+                            <div class="slds-media__body">
+                                <div class="slds-tile__detail slds-text-body--small">
+                                    <div class="slds-form-element">
+                                        <label class="slds-form-element__label">
+                                            {!$ObjectType.Survey__c.fields.Product_Category__c.label}
+                                        </label>
+                                        <div class="slds-form-element__control">
+                                            <div class="slds-select_container">
+                                               <apex:inputField styleClass="slds-select" value="{!survey.Product_Category__c}"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slds-tile slds-media slds-card__tile slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-3 slds-hint-parent">
+                            <div class="slds-media__body">
+                                <div class="slds-tile__detail slds-text-body--small">
+                                
+                                    <div class="slds-form-element">
+                                        <label class="slds-form-element__label">
+                                            {!$ObjectType.Survey__c.fields.Product_Brand__c.label}
+                                        </label>
+                                        <div class="slds-form-element__control">
+                                            <div class="slds-select_container">
+                                               <apex:inputField styleClass="slds-select" value="{!survey.Product_Brand__c}"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                    <div class="slds-form-element">
+                                        <label class="slds-form-element__label">
+                                            {!$ObjectType.Survey__c.fields.Product_Sub_Brand__c.label}
+                                        </label>
+                                        <div class="slds-form-element__control">
+                                            <div class="slds-select_container">
+                                                <apex:inputField styleClass="slds-select" value="{!survey.Product_Sub_Brand__c}"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slds-tile slds-media slds-card__tile slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-3 slds-hint-parent">
+                            <div class="slds-media__body">
+                                <div class="slds-tile__detail slds-text-body--small">
+                                    <div class="slds-form-element">
+                                        <label class="slds-form-element__label">
+                                            {!$ObjectType.Survey__c.fields.Store_Channel__c.label}
+                                        </label>
+                                        <div class="slds-form-element__control">
+                                            <div class="slds-select_container">
+                                               <apex:inputField styleClass="slds-select" value="{!survey.Store_Channel__c}"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slds-form-element">
+                                        <label class="slds-form-element__label">
+                                            {!$ObjectType.Survey__c.fields.Store_Local_Channel__c.label}
+                                        </label>
+                                        <div class="slds-form-element__control">
+                                            <div class="slds-select_container">
+                                                <apex:inputField styleClass="slds-select" value="{!survey.Store_Local_Channel__c}"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="slds-card__header slds-grid">
+                        <div class="slds-no-flex" style="margin: auto;">
+                            <button type="button" class="slds-button slds-button--brand" onClick="searchAction(); searchRecords();">Search</button>
+                            <apex:actionFunction name="searchAction" action="{!searchSurveyQuestion}" onComplete="hideSpinner();" rerender="searchResultPanel,emptySec" />
+                            
+                            <button type="button" class="slds-button slds-button--neutral" onClick="resetFilters(); resetSearch();">Reset</button>
+                            <apex:actionFunction name="resetFilters" action="{!resetFilters}" onComplete="hideSpinner();" rerender="searchResultPanel,emptySec" />
+                        </div>
+                    </div>
+                    <div id="recordsGrid">
+                        <apex:outputPanel id="searchResultPanel">
+                            <table class="slds-table slds-table--bordered slds-table--cell-buffer">
+                                <thead>
+                                    <tr class="slds-text-title--caps">
+                                        <th scope="col">
+                                            <div class="slds-truncate" title="Name">Question</div>
+                                        </th>
+                                        <th scope="col">
+                                            <div class="slds-truncate" title="Close Date">Product Category</div>
+                                        </th>
+                                        <th scope="col">
+                                            <div class="slds-truncate" title="Stage">Product Brand</div>
+                                        </th>
+                                        <th scope="col">
+                                            <div class="slds-truncate" title="Confidence">Product Sub Brand</div>
+                                        </th>
+                                        <th scope="col">
+                                            <div class="slds-truncate" title="Amount">Store Channel</div>
+                                        </th>
+                                        <th scope="col">
+                                            <div class="slds-truncate" title="Contact">Store Local Channel</div>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <apex:repeat value="{!surveyQuestionList}" var="sq" rendered="{!surveyQuestionList.size > 0}">
+                                        <tr>
+                                            <td data-label="Name">
+                                                <div class="slds-truncate" title="Name">{!sq.Question__c}</div>
+                                            </td>
+                                            <td data-label="Survey">
+                                                <div class="slds-truncate" title="Product Category">{!sq.Survey__r.Product_Category__c}</div>
+                                            </td>
+                                            <td data-label="Prospecting">
+                                                <div class="slds-truncate" title="Product Brand">{!sq.Survey__r.Product_Brand__c}</div>
+                                            </td>
+                                            <td data-label="Confidence">
+                                                <div class="slds-truncate" title="Product Sub Brand">{!sq.Survey__r.Product_Sub_Brand__c}</div>
+                                            </td>
+                                            <td data-label="Amount">
+                                                <div class="slds-truncate" title="Store Channel">{!sq.Survey__r.Store_Channel__c}</div>
+                                            </td>
+                                            <td data-label="Contact">
+                                                <div class="slds-truncate" title="Store Sub Channel">{!sq.Survey__r.Store_Local_Channel__c}</div>
+                                            </td>
+                                        </tr>
+                                    </apex:repeat>
+                                    <tr class="hide hide{!surveyQuestionList.size}">
+                                        <td style="text-align: center;" colspan="6" data-label="Id">
+                                            No records Found.
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            
+                        </apex:outputPanel>
+                    </div>
+                </div>
+                <div class="slds-card__footer">
+                    <!-- a href="javascript:void(0);">View All <span class="slds-assistive-text">entity type</span></a -->
+                </div>
+            </article>
+        </div>
+    </apex:form>
+    
+    <script>
+        function showSpinner() {
+            document.getElementById('spinner').className = '';
+        }
+        
+        function hideSpinner() {
+            document.getElementById('spinner').className = 'hide';
+        }
+        
+        function showTable() {
+            document.getElementById('recordsGrid').className = '';
+        }
+        
+        function hideTable() {
+            document.getElementById('recordsGrid').className = 'hide';
+        }
+        
+        function searchRecords() {
+            showSpinner();
+            showTable();
+        }
+        
+        function resetSearch() {
+            showSpinner();
+            hideTable();
+        }
+        
+        function initialize() {
+            hideSpinner();
+            hideTable();
+        }
+        
+        initialize();
+        
+    </script>
+    
+</apex:page>

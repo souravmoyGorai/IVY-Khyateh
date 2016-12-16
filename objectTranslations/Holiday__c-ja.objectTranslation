@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value><!-- Holiday --></value>
+    </caseValues>
+    <fields>
+        <label><!-- All Day --></label>
+        <name>All_Day__c</name>
+    </fields>
+    <fields>
+        <label>記載</label>
+        <name>Description__c</name>
+    </fields>
+    <fields>
+        <label>分配者</label>
+        <name>Distributor__c</name>
+        <relationshipLabel>祝日</relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- End --></label>
+        <name>End__c</name>
+    </fields>
+    <fields>
+        <label><!-- Recurring Holiday --></label>
+        <name>Recurring_Holiday__c</name>
+    </fields>
+    <fields>
+        <label><!-- Start --></label>
+        <name>Start__c</name>
+    </fields>
+    <nameFieldLabel><!-- Holiday Name --></nameFieldLabel>
+</CustomObjectTranslation>

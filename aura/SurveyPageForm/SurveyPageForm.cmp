@@ -1,0 +1,72 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes" controller="surveyPageFormController">
+	<ltng:require styles="{!$Resource.SLDS212 +'/assets/styles/salesforce-lightning-design-system.css'}" />
+    
+    <aura:handler value="{!this}" name="init" action="{!c.init}"/>
+    
+    <aura:attribute name="surveyQuestionList" type="Survey_Question__c[]" />
+    <aura:attribute name="surveySearch" type="Survey__c"
+    				default="{	'sobjectType': 'Survey__c',
+                    			'Name': '',
+                    			'Product_Brand__c': '',
+                    			'Product_Sub_Brand__c': '', 
+                    			'Product_Category__c': '',
+                             	'Store_Channel__c': '',
+                             	'Store_Local_Channel__c ': ''
+                    }"/>
+    <!-- Input Form using components -->
+	<div class="container">
+        <div class="slds-grid slds-grid--align-center slds-has-divider--bottom">
+        <form class="slds-form--inline">
+            <div class="slds-form-element">
+            	<div class="slds-form-element__control">
+                	<ui:inputText aura:id="searchProductCategory"
+                        class="slds-input"
+                        value="{!v.surveySearch.Product_Category__c}" placeholder="Product Category"/>
+                </div>
+            </div>
+        	<div class="slds-form-element">
+            	<div class="slds-form-element__control">
+                	<ui:inputText aura:id="searchProductBrand"
+                        class="slds-input"
+                        value="{!v.surveySearch.Product_Brand__c}" placeholder="Brand"/>
+                </div>
+            </div>
+            <div class="slds-form-element">
+            	<div class="slds-form-element__control">
+                	<ui:inputText aura:id="searchProductSubBrand"
+                        class="slds-input"
+                        value="{!v.surveySearch.Product_Sub_Brand__c}" placeholder="Sub Brand"/>
+                </div>
+            </div>
+            <div class="slds-form-element">
+            	<div class="slds-form-element__control">
+                	<ui:inputText aura:id="searchProductStore"
+                        class="slds-input"
+                        value="{!v.surveySearch.Store_Channel__c}" placeholder="Store"/>
+                </div>
+            </div>
+            <div class="slds-form-element">
+            	<div class="slds-form-element__control">
+                	<ui:inputText aura:id="searchProductLocalStore"
+                        class="slds-input"
+                        value="{!v.surveySearch.Store_Local_Channel__c}" placeholder="Local Channel"/>
+                </div>
+            </div>
+            <div class="slds-form-element">
+                <ui:button label="Submit" class="slds-button slds-button--neutral" labelClass="label" press="{!c.searchvalues}"/>
+            </div>
+        </form>
+        </div>
+        
+        <!-- Display survey questions -->
+        <div class="slds-text-heading--large">Question list</div>
+        <div class="container slds-p-top--medium">
+              <div id="list" class="row">
+                 <aura:iteration items="{!v.surveyQuestionList}" var="ques">
+
+                     <p>{!ques.Question__c }</p>                     
+                </aura:iteration>
+              </div>
+       </div> 
+    </div>
+</aura:component>

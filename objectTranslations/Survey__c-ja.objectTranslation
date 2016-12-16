@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value><!-- Survey --></value>
+    </caseValues>
+    <fields>
+        <label>活動中</label>
+        <name>Active__c</name>
+    </fields>
+    <fields>
+        <label>から</label>
+        <name>From__c</name>
+    </fields>
+    <fields>
+        <label>商品のブランド</label>
+        <name>Product_Brand__c</name>
+    </fields>
+    <fields>
+        <label>商品のカテゴリー</label>
+        <name>Product_Category__c</name>
+    </fields>
+    <fields>
+        <label>商品のサブブランド</label>
+        <name>Product_Sub_Brand__c</name>
+    </fields>
+    <fields>
+        <label>ストアーチャンネル</label>
+        <name>Store_Channel__c</name>
+    </fields>
+    <fields>
+        <label>ストアーのローカルチャンネル</label>
+        <name>Store_Local_Channel__c</name>
+    </fields>
+    <fields>
+        <label>調査コード</label>
+        <name>Survey_Code__c</name>
+    </fields>
+    <fields>
+        <label>へ</label>
+        <name>To__c</name>
+    </fields>
+    <layouts>
+        <layout>Survey Layout</layout>
+        <sections>
+            <label><!-- Applicable To --></label>
+            <section>Applicable To</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel><!-- Survey Name --></nameFieldLabel>
+</CustomObjectTranslation>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Survey Question</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Survey Questions</value>
+    </caseValues>
+    <fields>
+        <label><!-- Code --></label>
+        <name>Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Dependent Question Match --></label>
+        <name>Dependent_Question_Match__c</name>
+    </fields>
+    <fields>
+        <label><!-- Dependent Question --></label>
+        <name>Dependent_Question__c</name>
+        <relationshipLabel><!-- Survey Questions --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- From --></label>
+        <name>From__c</name>
+    </fields>
+    <fields>
+        <label><!-- Question Category --></label>
+        <name>Question_Category__c</name>
+        <picklistValues>
+            <masterLabel>IAA</masterLabel>
+            <translation><!-- IAA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IAC</masterLabel>
+            <translation><!-- IAC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IAF</masterLabel>
+            <translation><!-- IAF --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IAV</masterLabel>
+            <translation><!-- IAV --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Question Code --></label>
+        <name>Question_Code__c</name>
+        <picklistValues>
+            <masterLabel>IAA</masterLabel>
+            <translation><!-- IAA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IAC</masterLabel>
+            <translation><!-- IAC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IAF</masterLabel>
+            <translation><!-- IAF --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IAV</masterLabel>
+            <translation><!-- IAV --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Question Id --></label>
+        <name>Question_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Question Type --></label>
+        <name>Question_Type__c</name>
+        <picklistValues>
+            <masterLabel>Integer Text</masterLabel>
+            <translation><!-- Integer Text --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes/No</masterLabel>
+            <translation><!-- Yes/No --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Question --></label>
+        <name>Question__c</name>
+    </fields>
+    <fields>
+        <label><!-- Survey Code --></label>
+        <name>Survey_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Survey --></label>
+        <name>Survey__c</name>
+        <relationshipLabel><!-- Survey Questions --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Target --></label>
+        <name>Target__c</name>
+    </fields>
+    <fields>
+        <label><!-- To --></label>
+        <name>To__c</name>
+    </fields>
+    <fields>
+        <label><!-- Weightage --></label>
+        <name>Weightage__c</name>
+    </fields>
+    <layouts>
+        <layout>Survey Question Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

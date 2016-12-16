@@ -1,0 +1,48 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes" controller="VisitPlanNewComponentApexClass">
+	
+    <aura:handler value="{!this}" name="init" action="{!c.init}"/>
+    
+    <aura:attribute name="prevVisitPlanList" type="Visit_Plan__c[]" />
+    
+    <div class="slds">
+        <div class="slds-page-header">
+          <div class="slds-grid">
+            <div class="slds-col slds-has-flexi-truncate">
+              <p class="slds-text-heading--label">Visit Plan</p>
+              <div class="slds-grid">
+                <div class="slds-grid slds-type-focus slds-no-space">
+                  <h1 class="slds-text-heading--medium slds-truncate" title="All Surveys">Schedule Visit Plans</h1>
+                </div>
+              </div>
+            </div>
+            <div class="slds-col--bump-left">
+            	<div class="slds-button-group" role="group">
+                    <ui:button class="slds-button slds-button--neutral" label="Refresh"/>
+                    <ui:button class="slds-button slds-button--neutral" label="Edit"/>
+                    <ui:button class="slds-button slds-button--neutral" label="Save"/>
+                </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="container">
+            <div class="slds-grid">
+                <div class="slds-text-heading--large">Previous visit plans</div>
+            </div>
+            
+            <div class="slds-form-element slds-is-required slds-col slds-size--1-of-1 slds-medium-size--5-of-12 slds-large-size--1-of-3 slds-m-left--large">
+                <c:LookupSObject label="Account" pluralLabel="Accounts" sObjectAPIName="Account" />
+            </div><br/>
+			<ui:button label="Fetch" press="{!c.fetch}" buttonTitle="fetch" class="slds-m-left--large"/>
+            
+            <div class="container slds-p-top--medium">
+                <div id="list" class="row">
+                    <aura:iteration items="{!v.prevVisitPlanList}" var="vp">
+                    	<p>{!vp.Name}</p>                     
+                    </aura:iteration>
+               </div>
+            </div> 
+        </div>
+        
+    </div>
+</aura:component>

@@ -1,0 +1,58 @@
+<aura:component >
+    
+    <aura:attribute name="days" type="Integer[]" default="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31" />
+    <aura:attribute name="weekdays" type="String[]" default="Sunday,Monday,Tuesday,Wednesday,Thursday,Friday,Saturday" />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+    <div class="slds-grid slds-wrap">
+        <ui:inputRadio name="monthlyFrequency" change="{!c.onFrequencyChange1}" />
+        <label class="slds-radio__label" style="padding-left:5px">
+                                <span class="slds-form-element__label">On day</span>
+                            </label>
+        <div>
+            <ui:inputSelect aura:id="day-id" class="slds-select adjustWidth" change="{!c.onFrequencyChange1}">
+                <aura:iteration items="{!v.days}" var="day">
+                    <ui:inputSelectOption text="{!day}" label="{!day}" />
+                </aura:iteration>
+            </ui:inputSelect>
+        </div>
+        <label class="slds-radio__label" style="padding-left:5px">
+                                <span class="slds-form-element__label">of every</span>
+                            </label>
+        <ui:inputText aura:id="monthText-id" class="slds-input adjustWidth" change="{!c.onFrequencyChange1}" placeholder="1" />
+        <label class="slds-radio__label" style="padding-left:5px">
+                                <span class="slds-form-element__label">month(s)</span>
+                            </label>
+    </div>
+    <div class="slds-grid slds-wrap" style="padding-top:20px">
+        <ui:inputRadio name="monthlyFrequency" change="{!c.onFrequencyChange2}" />
+        <label class="slds-radio__label" style="padding-left:5px">
+                                <span class="slds-form-element__label">On the</span>
+                            </label>
+        <div>
+            <ui:inputSelect aura:id="week-id" class="slds-select adjustWidth" change="{!c.onFrequencyChange2}">
+                <ui:inputSelectOption text="1st" label="1st" />
+                <ui:inputSelectOption text="2nd" label="2nd" />
+                <ui:inputSelectOption text="3rd" label="3rd" />
+                <ui:inputSelectOption text="4th" label="4th" />
+                <ui:inputSelectOption text="last" label="last" />
+            </ui:inputSelect>
+        </div>
+        <div style="padding-left:5px">
+            <ui:inputSelect aura:id="day2-id" class="slds-select adjustWidth2" change="{!c.onFrequencyChange2}">
+                <ui:inputSelectOption text="day" label="day" />
+                <aura:iteration items="{!v.weekdays}" var="day">
+                    <ui:inputSelectOption text="{!day}" label="{!day}" />
+                </aura:iteration>
+            </ui:inputSelect>
+        </div>
+        <label class="slds-radio__label" style="padding-left:5px">
+                    			<span class="slds-form-element__label">of every</span>
+                			</label>
+        <ui:inputText aura:id="monthText2-id" class="slds-input adjustWidth" change="{!c.onFrequencyChange2}" placeholder="1" />
+        <label class="slds-radio__label" style="padding-left:5px">
+                    			<span class="slds-form-element__label">month(s)</span>
+                			</label>
+    </div>
+</aura:component>

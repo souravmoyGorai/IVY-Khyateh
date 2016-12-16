@@ -1,0 +1,23 @@
+<aura:component >
+    
+    <aura:attribute name="textValue" type="String" default="1"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+    <div>
+        <ui:inputRadio aura:id="radio1-id" name="dailyFrequency" change="{!c.onFrequencyChange1}"/>
+        <label class="slds-radio__label" style="padding-left:5px">
+            <span class="slds-form-element__label">Every weekday</span>
+        </label>
+    </div>
+    <div class="slds-grid slds-wrap" style="padding-top:20px">
+        <ui:inputRadio name="dailyFrequency" change="{!c.onFrequencyChange2}"/>
+        <label class="slds-radio__label" style="padding-left:5px">
+            <span class="slds-form-element__label">Every</span>
+        </label>
+        <ui:inputText aura:id="daily-days" class="slds-input adjustWidth" value="{!v.textValue}"/>
+        <label class="slds-radio__label" style="padding-left:5px">
+            <span class="slds-form-element__label">day(s)</span>
+        </label>
+    </div>
+</aura:component>
